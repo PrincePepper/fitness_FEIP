@@ -1,4 +1,20 @@
 <resources>
     <string name="app_name">fitness_FEIP</string>
     <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="have_account">Уже есть аккаунт?</string>
+    <string name="registration">Зарегистрироваться</string>
+    <string name="created_students">Созданный студентами</string>
+    <string name="best_tracker">Пожалуй, лучший фитнес трекер в ДВФУ</string>
+    <string name="agreement">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение</string>
+    <string name="login">Логин</string>
+    <string name="nameOrNik">Имя или никнейм</string>
+    <string name="password">Пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="sex">Пол</string>
+    <string name="other">Другое</string>
+    <string name="woman">Женщина</string>
+    <string name="man">Мужчина</string>
+    <string name="login_text">Войти</string>
 </resources>
