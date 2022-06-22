@@ -1,8 +1,6 @@
 <resources>
-    <string name="app_name">fitness_FEIP</string>
+    <string name="app_name">Фитнес-трекер</string>
     <string name="todo">TODO</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="have_account">Уже есть аккаунт?</string>
     <string name="registration">Зарегистрироваться</string>
     <string name="created_students">Созданный студентами</string>
@@ -17,4 +15,24 @@
     <string name="woman">Женщина</string>
     <string name="man">Мужчина</string>
     <string name="login_text">Войти</string>
+    <string name="activity">Активность</string>
+    <string name="profile">Профиль</string>
+    <string name="menu_save">Сохранить</string>
+
+    <string name="hint_password">Пароль</string>
+    <string name="hint_login">Логин</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="hint_name_nickname">Имя или никнейм</string>
+    <string name="hint_again_password">Повторите пароль</string>
+    <string name="exit">Выйти</string>
+
+    <string name="my_tab_name">Моя</string>
+    <string name="users_tab_name">Пользователи</string>
+
+    <string name="van_darkholme">\@van_darkholme</string>
+
+    <string name="workout_time">Время потренить</string>
+    <string name="tap_text">Нажимай на кнопку ниже и начинаем трекать активность</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
