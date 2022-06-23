@@ -24,7 +24,8 @@ class ApiRequest {
                         response.body()?.let { callback.onSuccess(it) } ?: callback.onError(
                             IOException("Server returned error")
                         )
-                    } else callback.onError(IOException("Empty body"))
+                    } else response.errorBody()
+                        ?.string()//callback.onError(IOException("Empty body"))
                 }
 
                 override fun onFailure(call: Call<Login>, t: Throwable) {
@@ -44,7 +45,7 @@ class ApiRequest {
                     response.body()?.let { callback.onSuccess(it) }
                         ?: callback.onError(IOException("Server returned error"))
 
-                } else callback.onError(IOException("Empty body"))
+                } else response.errorBody()?.string()//callback.onError(IOException("Empty body"))
 
             }
 
