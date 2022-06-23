@@ -43,29 +43,40 @@ class RegistrationViewModel(private val sharedPref: TokenSP) : ViewModel() {
         passwordRepeat: String,
         gender: Int
     ) {
+        var trigger = true
 
         if (TextUtils.isEmpty(login)) {
             _showLoginError.postValue(1)
+            trigger = false
         } else _showLoginError.postValue(0)
 
         if (name.isBlank()) {
             _showNameError.postValue(true)
+            trigger = false
         } else _showNameError.postValue(false)
 
         if (TextUtils.isEmpty(password)) {
             _showPasswordError.postValue(1)
+            trigger = false
         } else if (!PASSWORD_PATTERN.matcher(password).matches()) {
             _showPasswordError.postValue(2)
+            trigger = false
         } else _showPasswordError.postValue(0)
 
         if (passwordRepeat.isBlank()) {
             _showRepeatPasswordError.postValue(true)
+            trigger = false
         } else _showRepeatPasswordError.postValue(false)
 
         if (passwordRepeat != password) {
             _showWrongRepeatPasswordError.postValue(true)
+            trigger = false
         } else _showWrongRepeatPasswordError.postValue(false)
 
+        if (trigger) service(login, password, name, gender)
+    }
+
+    private fun service(login: String, password: String, name: String, gender: Int) {
         service.register(
             login,
             password,

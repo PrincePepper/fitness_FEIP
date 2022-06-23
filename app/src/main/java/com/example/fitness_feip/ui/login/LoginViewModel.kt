@@ -32,17 +32,24 @@ class LoginViewModel(private val sharedPref: TokenSP) : ViewModel() {
     val error: LiveData<String> get() = _error
 
     fun onLoginClicked(login: String, password: String) {
-
+        var trigger = true
         if (TextUtils.isEmpty(login)) {
             _showLoginError.postValue(1)
+            trigger = false
         } else _showLoginError.postValue(0)
 
         if (TextUtils.isEmpty(password)) {
             _showPasswordError.postValue(1)
+            trigger = false
         } else if (!PASSWORD_PATTERN.matcher(password).matches()) {
             _showPasswordError.postValue(2)
+            trigger = false
         } else _showPasswordError.postValue(0)
 
+        if (trigger) service(login, password)
+    }
+
+    private fun service(login: String, password: String) {
         service.login(login, password, object : ApiRequest.LoginCallback {
             override fun onSuccess(result: Login) {
                 sharedPref.saveToken(result.token)
