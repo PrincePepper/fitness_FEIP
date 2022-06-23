@@ -45,6 +45,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/TextNoGravity"
+                    android:id="@+id/login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/login"
@@ -68,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/nameOrNik"
+                    android:id="@+id/name"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,6 +88,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/TextNoGravity"
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
@@ -107,6 +110,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/TextNoGravity"
+                    android:id="@+id/repeatpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/repeat_password"
