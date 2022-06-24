@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/menu_profileScreen"
-        android:name="com.example.fitness_feip.ui.main.screens.ProfileScreen"
+        android:name="com.example.fitness_feip.ui.main.screens.profile.ProfileScreen"
         android:label="ProfileScreen" />
     <fragment
         android:id="@+id/menu_activityScreen"
